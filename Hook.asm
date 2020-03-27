@@ -1,0 +1,135 @@
+.code
+extern lpOrigProcs:QWORD
+HidD_FlushQueue proc
+	jmp lpOrigProcs[0]
+HidD_FlushQueue endp
+HidD_FreePreparsedData proc
+	jmp lpOrigProcs[1*8]
+HidD_FreePreparsedData endp
+HidD_GetAttributes proc
+	jmp lpOrigProcs[2*8]
+HidD_GetAttributes endp
+HidD_GetConfiguration proc
+	jmp lpOrigProcs[3*8]
+HidD_GetConfiguration endp
+HidD_GetFeature proc
+	jmp lpOrigProcs[4*8]
+HidD_GetFeature endp
+HidD_GetHidGuid proc
+	jmp lpOrigProcs[5*8]
+HidD_GetHidGuid endp
+HidD_GetIndexedString proc
+	jmp lpOrigProcs[6*8]
+HidD_GetIndexedString endp
+HidD_GetInputReport proc
+	jmp lpOrigProcs[7*8]
+HidD_GetInputReport endp
+HidD_GetManufacturerString proc
+	jmp lpOrigProcs[8*8]
+HidD_GetManufacturerString endp
+HidD_GetMsGenreDescriptor proc
+	jmp lpOrigProcs[9*8]
+HidD_GetMsGenreDescriptor endp
+HidD_GetNumInputBuffers proc
+	jmp lpOrigProcs[10*8]
+HidD_GetNumInputBuffers endp
+HidD_GetPhysicalDescriptor proc
+	jmp lpOrigProcs[11*8]
+HidD_GetPhysicalDescriptor endp
+HidD_GetPreparsedData proc
+	jmp lpOrigProcs[12*8]
+HidD_GetPreparsedData endp
+HidD_GetProductString proc
+	jmp lpOrigProcs[13*8]
+HidD_GetProductString endp
+HidD_GetSerialNumberString proc
+	jmp lpOrigProcs[14*8]
+HidD_GetSerialNumberString endp
+HidD_Hello proc
+	jmp lpOrigProcs[15*8]
+HidD_Hello endp
+HidD_SetConfiguration proc
+	jmp lpOrigProcs[16*8]
+HidD_SetConfiguration endp
+HidD_SetFeature proc
+	jmp lpOrigProcs[17*8]
+HidD_SetFeature endp
+HidD_SetNumInputBuffers proc
+	jmp lpOrigProcs[18*8]
+HidD_SetNumInputBuffers endp
+HidD_SetOutputReport proc
+	jmp lpOrigProcs[19*8]
+HidD_SetOutputReport endp
+HidP_GetButtonCaps proc
+	jmp lpOrigProcs[20*8]
+HidP_GetButtonCaps endp
+HidP_GetCaps proc
+	jmp lpOrigProcs[21*8]
+HidP_GetCaps endp
+HidP_GetData proc
+	jmp lpOrigProcs[22*8]
+HidP_GetData endp
+HidP_GetExtendedAttributes proc
+	jmp lpOrigProcs[23*8]
+HidP_GetExtendedAttributes endp
+HidP_GetLinkCollectionNodes proc
+	jmp lpOrigProcs[24*8]
+HidP_GetLinkCollectionNodes endp
+HidP_GetScaledUsageValue proc
+	jmp lpOrigProcs[25*8]
+HidP_GetScaledUsageValue endp
+HidP_GetSpecificButtonCaps proc
+	jmp lpOrigProcs[26*8]
+HidP_GetSpecificButtonCaps endp
+HidP_GetSpecificValueCaps proc
+	jmp lpOrigProcs[27*8]
+HidP_GetSpecificValueCaps endp
+HidP_GetUsageValue proc
+	jmp lpOrigProcs[28*8]
+HidP_GetUsageValue endp
+HidP_GetUsageValueArray proc
+	jmp lpOrigProcs[29*8]
+HidP_GetUsageValueArray endp
+HidP_GetUsages proc
+	jmp lpOrigProcs[30*8]
+HidP_GetUsages endp
+HidP_GetUsagesEx proc
+	jmp lpOrigProcs[31*8]
+HidP_GetUsagesEx endp
+HidP_GetValueCaps proc
+	jmp lpOrigProcs[32*8]
+HidP_GetValueCaps endp
+HidP_InitializeReportForID proc
+	jmp lpOrigProcs[33*8]
+HidP_InitializeReportForID endp
+HidP_MaxDataListLength proc
+	jmp lpOrigProcs[34*8]
+HidP_MaxDataListLength endp
+HidP_MaxUsageListLength proc
+	jmp lpOrigProcs[35*8]
+HidP_MaxUsageListLength endp
+HidP_SetData proc
+	jmp lpOrigProcs[36*8]
+HidP_SetData endp
+HidP_SetScaledUsageValue proc
+	jmp lpOrigProcs[37*8]
+HidP_SetScaledUsageValue endp
+HidP_SetUsageValue proc
+	jmp lpOrigProcs[38*8]
+HidP_SetUsageValue endp
+HidP_SetUsageValueArray proc
+	jmp lpOrigProcs[39*8]
+HidP_SetUsageValueArray endp
+HidP_SetUsages proc
+	jmp lpOrigProcs[40*8]
+HidP_SetUsages endp
+HidP_TranslateUsagesToI8042ScanCodes proc
+	jmp lpOrigProcs[41*8]
+HidP_TranslateUsagesToI8042ScanCodes endp
+HidP_UnsetUsages proc
+	jmp lpOrigProcs[42*8]
+HidP_UnsetUsages endp
+HidP_UsageListDifference proc
+	jmp lpOrigProcs[43*8]
+HidP_UsageListDifference endp
+end

@@ -1,54 +1,46 @@
 #include <Windows.h>
 
-#define NUM_FUNCTIONS 44
+#define NUM_FUNCTIONS 36
 
 LPVOID lpOrigProcs[NUM_FUNCTIONS];
 
 static LPCSTR lpImportNames[] = {
-	"HidD_FlushQueue",
-	"HidD_FreePreparsedData",
-	"HidD_GetAttributes",
-	"HidD_GetConfiguration",
-	"HidD_GetFeature",
-	"HidD_GetHidGuid",
-	"HidD_GetIndexedString",
-	"HidD_GetInputReport",
-	"HidD_GetManufacturerString",
-	"HidD_GetMsGenreDescriptor",
-	"HidD_GetNumInputBuffers",
-	"HidD_GetPhysicalDescriptor",
-	"HidD_GetPreparsedData",
-	"HidD_GetProductString",
-	"HidD_GetSerialNumberString",
-	"HidD_Hello",
-	"HidD_SetConfiguration",
-	"HidD_SetFeature",
-	"HidD_SetNumInputBuffers",
-	"HidD_SetOutputReport",
-	"HidP_GetButtonCaps",
-	"HidP_GetCaps",
-	"HidP_GetData",
-	"HidP_GetExtendedAttributes",
-	"HidP_GetLinkCollectionNodes",
-	"HidP_GetScaledUsageValue",
-	"HidP_GetSpecificButtonCaps",
-	"HidP_GetSpecificValueCaps",
-	"HidP_GetUsageValue",
-	"HidP_GetUsageValueArray",
-	"HidP_GetUsages",
-	"HidP_GetUsagesEx",
-	"HidP_GetValueCaps",
-	"HidP_InitializeReportForID",
-	"HidP_MaxDataListLength",
-	"HidP_MaxUsageListLength",
-	"HidP_SetData",
-	"HidP_SetScaledUsageValue",
-	"HidP_SetUsageValue",
-	"HidP_SetUsageValueArray",
-	"HidP_SetUsages",
-	"HidP_TranslateUsagesToI8042ScanCodes",
-	"HidP_UnsetUsages",
-	"HidP_UsageListDifference"
+	"agsDeInit",
+	"agsDriverExtensionsDX11_BeginUAVOverlap",
+	"agsDriverExtensionsDX11_CreateBuffer",
+	"agsDriverExtensionsDX11_CreateDevice",
+	"agsDriverExtensionsDX11_CreateFromDevice",
+	"agsDriverExtensionsDX11_CreateTexture1D",
+	"agsDriverExtensionsDX11_CreateTexture2D",
+	"agsDriverExtensionsDX11_CreateTexture3D",
+	"agsDriverExtensionsDX11_Destroy",
+	"agsDriverExtensionsDX11_DestroyDevice",
+	"agsDriverExtensionsDX11_EndUAVOverlap",
+	"agsDriverExtensionsDX11_GetMaxClipRects",
+	"agsDriverExtensionsDX11_IASetPrimitiveTopology",
+	"agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirect",
+	"agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirectCountIndirect",
+	"agsDriverExtensionsDX11_MultiDrawInstancedIndirect",
+	"agsDriverExtensionsDX11_MultiDrawInstancedIndirectCountIndirect",
+	"agsDriverExtensionsDX11_NotifyResourceBeginAllAccess",
+	"agsDriverExtensionsDX11_NotifyResourceEndAllAccess",
+	"agsDriverExtensionsDX11_NotifyResourceEndWrites",
+	"agsDriverExtensionsDX11_NumPendingAsyncCompileJobs",
+	"agsDriverExtensionsDX11_SetClipRects",
+	"agsDriverExtensionsDX11_SetDepthBounds",
+	"agsDriverExtensionsDX11_SetDiskShaderCacheEnabled",
+	"agsDriverExtensionsDX11_SetMaxAsyncCompileThreadCount",
+	"agsDriverExtensionsDX11_SetViewBroadcastMasks",
+	"agsDriverExtensionsDX11_WriteBreadcrumb",
+	"agsDriverExtensionsDX12_CreateDevice",
+	"agsDriverExtensionsDX12_CreateFromDevice",
+	"agsDriverExtensionsDX12_Destroy",
+	"agsDriverExtensionsDX12_DestroyDevice",
+	"agsDriverExtensionsDX12_PopMarker",
+	"agsDriverExtensionsDX12_PushMarker",
+	"agsDriverExtensionsDX12_SetMarker",
+	"agsInit",
+	"agsSetDisplayMode",
 };
 
 BOOL APIENTRY LinkFunctions(HMODULE hLibrary)
@@ -63,47 +55,39 @@ BOOL APIENTRY LinkFunctions(HMODULE hLibrary)
 	return TRUE;
 }
 
-EXTERN_C VOID HidD_FlushQueue(VOID);
-EXTERN_C VOID HidD_FreePreparsedData(VOID);
-EXTERN_C VOID HidD_GetAttributes(VOID);
-EXTERN_C VOID HidD_GetConfiguration(VOID);
-EXTERN_C VOID HidD_GetFeature(VOID);
-EXTERN_C VOID HidD_GetHidGuid(VOID);
-EXTERN_C VOID HidD_GetIndexedString(VOID);
-EXTERN_C VOID HidD_GetInputReport(VOID);
-EXTERN_C VOID HidD_GetManufacturerString(VOID);
-EXTERN_C VOID HidD_GetMsGenreDescriptor(VOID);
-EXTERN_C VOID HidD_GetNumInputBuffers(VOID);
-EXTERN_C VOID HidD_GetPhysicalDescriptor(VOID);
-EXTERN_C VOID HidD_GetPreparsedData(VOID);
-EXTERN_C VOID HidD_GetProductString(VOID);
-EXTERN_C VOID HidD_GetSerialNumberString(VOID);
-EXTERN_C VOID HidD_Hello(VOID);
-EXTERN_C VOID HidD_SetConfiguration(VOID);
-EXTERN_C VOID HidD_SetFeature(VOID);
-EXTERN_C VOID HidD_SetNumInputBuffers(VOID);
-EXTERN_C VOID HidD_SetOutputReport(VOID);
-EXTERN_C VOID HidP_GetButtonCaps(VOID);
-EXTERN_C VOID HidP_GetCaps(VOID);
-EXTERN_C VOID HidP_GetData(VOID);
-EXTERN_C VOID HidP_GetExtendedAttributes(VOID);
-EXTERN_C VOID HidP_GetLinkCollectionNodes(VOID);
-EXTERN_C VOID HidP_GetScaledUsageValue(VOID);
-EXTERN_C VOID HidP_GetSpecificButtonCaps(VOID);
-EXTERN_C VOID HidP_GetSpecificValueCaps(VOID);
-EXTERN_C VOID HidP_GetUsageValue(VOID);
-EXTERN_C VOID HidP_GetUsageValueArray(VOID);
-EXTERN_C VOID HidP_GetUsages(VOID);
-EXTERN_C VOID HidP_GetUsagesEx(VOID);
-EXTERN_C VOID HidP_GetValueCaps(VOID);
-EXTERN_C VOID HidP_InitializeReportForID(VOID);
-EXTERN_C VOID HidP_MaxDataListLength(VOID);
-EXTERN_C VOID HidP_MaxUsageListLength(VOID);
-EXTERN_C VOID HidP_SetData(VOID);
-EXTERN_C VOID HidP_SetScaledUsageValue(VOID);
-EXTERN_C VOID HidP_SetUsageValue(VOID);
-EXTERN_C VOID HidP_SetUsageValueArray(VOID);
-EXTERN_C VOID HidP_SetUsages(VOID);
-EXTERN_C VOID HidP_TranslateUsagesToI8042ScanCodes(VOID);
-EXTERN_C VOID HidP_UnsetUsages(VOID);
-EXTERN_C VOID HidP_UsageListDifference(VOID);
+EXTERN_C VOID agsDeInit(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_BeginUAVOverlap(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_CreateBuffer(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_CreateDevice(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_CreateFromDevice(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_CreateTexture1D(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_CreateTexture2D(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_CreateTexture3D(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_Destroy(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_DestroyDevice(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_EndUAVOverlap(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_GetMaxClipRects(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_IASetPrimitiveTopology(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirect(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirectCountIndirect(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_MultiDrawInstancedIndirect(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_MultiDrawInstancedIndirectCountIndirect(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_NotifyResourceBeginAllAccess(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_NotifyResourceEndAllAccess(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_NotifyResourceEndWrites(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_NumPendingAsyncCompileJobs(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_SetClipRects(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_SetDepthBounds(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_SetDiskShaderCacheEnabled(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_SetMaxAsyncCompileThreadCount(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_SetViewBroadcastMasks(VOID);
+EXTERN_C VOID agsDriverExtensionsDX11_WriteBreadcrumb(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_CreateDevice(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_CreateFromDevice(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_Destroy(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_DestroyDevice(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_PopMarker(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_PushMarker(VOID);
+EXTERN_C VOID agsDriverExtensionsDX12_SetMarker(VOID);
+EXTERN_C VOID agsInit(VOID);
+EXTERN_C VOID agsSetDisplayMode(VOID);

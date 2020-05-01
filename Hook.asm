@@ -1,135 +1,111 @@
 .code
 extern lpOrigProcs:QWORD
-HidD_FlushQueue proc
-	jmp lpOrigProcs[0]
-HidD_FlushQueue endp
-HidD_FreePreparsedData proc
-	jmp lpOrigProcs[1*8]
-HidD_FreePreparsedData endp
-HidD_GetAttributes proc
-	jmp lpOrigProcs[2*8]
-HidD_GetAttributes endp
-HidD_GetConfiguration proc
-	jmp lpOrigProcs[3*8]
-HidD_GetConfiguration endp
-HidD_GetFeature proc
-	jmp lpOrigProcs[4*8]
-HidD_GetFeature endp
-HidD_GetHidGuid proc
-	jmp lpOrigProcs[5*8]
-HidD_GetHidGuid endp
-HidD_GetIndexedString proc
-	jmp lpOrigProcs[6*8]
-HidD_GetIndexedString endp
-HidD_GetInputReport proc
-	jmp lpOrigProcs[7*8]
-HidD_GetInputReport endp
-HidD_GetManufacturerString proc
-	jmp lpOrigProcs[8*8]
-HidD_GetManufacturerString endp
-HidD_GetMsGenreDescriptor proc
-	jmp lpOrigProcs[9*8]
-HidD_GetMsGenreDescriptor endp
-HidD_GetNumInputBuffers proc
-	jmp lpOrigProcs[10*8]
-HidD_GetNumInputBuffers endp
-HidD_GetPhysicalDescriptor proc
-	jmp lpOrigProcs[11*8]
-HidD_GetPhysicalDescriptor endp
-HidD_GetPreparsedData proc
-	jmp lpOrigProcs[12*8]
-HidD_GetPreparsedData endp
-HidD_GetProductString proc
-	jmp lpOrigProcs[13*8]
-HidD_GetProductString endp
-HidD_GetSerialNumberString proc
-	jmp lpOrigProcs[14*8]
-HidD_GetSerialNumberString endp
-HidD_Hello proc
-	jmp lpOrigProcs[15*8]
-HidD_Hello endp
-HidD_SetConfiguration proc
-	jmp lpOrigProcs[16*8]
-HidD_SetConfiguration endp
-HidD_SetFeature proc
-	jmp lpOrigProcs[17*8]
-HidD_SetFeature endp
-HidD_SetNumInputBuffers proc
-	jmp lpOrigProcs[18*8]
-HidD_SetNumInputBuffers endp
-HidD_SetOutputReport proc
-	jmp lpOrigProcs[19*8]
-HidD_SetOutputReport endp
-HidP_GetButtonCaps proc
-	jmp lpOrigProcs[20*8]
-HidP_GetButtonCaps endp
-HidP_GetCaps proc
-	jmp lpOrigProcs[21*8]
-HidP_GetCaps endp
-HidP_GetData proc
-	jmp lpOrigProcs[22*8]
-HidP_GetData endp
-HidP_GetExtendedAttributes proc
-	jmp lpOrigProcs[23*8]
-HidP_GetExtendedAttributes endp
-HidP_GetLinkCollectionNodes proc
-	jmp lpOrigProcs[24*8]
-HidP_GetLinkCollectionNodes endp
-HidP_GetScaledUsageValue proc
-	jmp lpOrigProcs[25*8]
-HidP_GetScaledUsageValue endp
-HidP_GetSpecificButtonCaps proc
-	jmp lpOrigProcs[26*8]
-HidP_GetSpecificButtonCaps endp
-HidP_GetSpecificValueCaps proc
-	jmp lpOrigProcs[27*8]
-HidP_GetSpecificValueCaps endp
-HidP_GetUsageValue proc
-	jmp lpOrigProcs[28*8]
-HidP_GetUsageValue endp
-HidP_GetUsageValueArray proc
-	jmp lpOrigProcs[29*8]
-HidP_GetUsageValueArray endp
-HidP_GetUsages proc
-	jmp lpOrigProcs[30*8]
-HidP_GetUsages endp
-HidP_GetUsagesEx proc
-	jmp lpOrigProcs[31*8]
-HidP_GetUsagesEx endp
-HidP_GetValueCaps proc
-	jmp lpOrigProcs[32*8]
-HidP_GetValueCaps endp
-HidP_InitializeReportForID proc
-	jmp lpOrigProcs[33*8]
-HidP_InitializeReportForID endp
-HidP_MaxDataListLength proc
-	jmp lpOrigProcs[34*8]
-HidP_MaxDataListLength endp
-HidP_MaxUsageListLength proc
-	jmp lpOrigProcs[35*8]
-HidP_MaxUsageListLength endp
-HidP_SetData proc
-	jmp lpOrigProcs[36*8]
-HidP_SetData endp
-HidP_SetScaledUsageValue proc
-	jmp lpOrigProcs[37*8]
-HidP_SetScaledUsageValue endp
-HidP_SetUsageValue proc
-	jmp lpOrigProcs[38*8]
-HidP_SetUsageValue endp
-HidP_SetUsageValueArray proc
-	jmp lpOrigProcs[39*8]
-HidP_SetUsageValueArray endp
-HidP_SetUsages proc
-	jmp lpOrigProcs[40*8]
-HidP_SetUsages endp
-HidP_TranslateUsagesToI8042ScanCodes proc
-	jmp lpOrigProcs[41*8]
-HidP_TranslateUsagesToI8042ScanCodes endp
-HidP_UnsetUsages proc
-	jmp lpOrigProcs[42*8]
-HidP_UnsetUsages endp
-HidP_UsageListDifference proc
-	jmp lpOrigProcs[43*8]
-HidP_UsageListDifference endp
+agsDeInit proc
+    jmp lpOrigProcs[0]
+agsDeInit endp
+agsDriverExtensionsDX11_BeginUAVOverlap proc
+    jmp lpOrigProcs[8]
+agsDriverExtensionsDX11_BeginUAVOverlap endp
+agsDriverExtensionsDX11_CreateBuffer proc
+    jmp lpOrigProcs[16]
+agsDriverExtensionsDX11_CreateBuffer endp
+agsDriverExtensionsDX11_CreateDevice proc
+    jmp lpOrigProcs[24]
+agsDriverExtensionsDX11_CreateDevice endp
+agsDriverExtensionsDX11_CreateFromDevice proc
+    jmp lpOrigProcs[32]
+agsDriverExtensionsDX11_CreateFromDevice endp
+agsDriverExtensionsDX11_CreateTexture1D proc
+    jmp lpOrigProcs[40]
+agsDriverExtensionsDX11_CreateTexture1D endp
+agsDriverExtensionsDX11_CreateTexture2D proc
+    jmp lpOrigProcs[48]
+agsDriverExtensionsDX11_CreateTexture2D endp
+agsDriverExtensionsDX11_CreateTexture3D proc
+    jmp lpOrigProcs[56]
+agsDriverExtensionsDX11_CreateTexture3D endp
+agsDriverExtensionsDX11_Destroy proc
+    jmp lpOrigProcs[64]
+agsDriverExtensionsDX11_Destroy endp
+agsDriverExtensionsDX11_DestroyDevice proc
+    jmp lpOrigProcs[72]
+agsDriverExtensionsDX11_DestroyDevice endp
+agsDriverExtensionsDX11_EndUAVOverlap proc
+    jmp lpOrigProcs[80]
+agsDriverExtensionsDX11_EndUAVOverlap endp
+agsDriverExtensionsDX11_GetMaxClipRects proc
+    jmp lpOrigProcs[88]
+agsDriverExtensionsDX11_GetMaxClipRects endp
+agsDriverExtensionsDX11_IASetPrimitiveTopology proc
+    jmp lpOrigProcs[96]
+agsDriverExtensionsDX11_IASetPrimitiveTopology endp
+agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirect proc
+    jmp lpOrigProcs[104]
+agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirect endp
+agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirectCountIndirect proc
+    jmp lpOrigProcs[112]
+agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirectCountIndirect endp
+agsDriverExtensionsDX11_MultiDrawInstancedIndirect proc
+    jmp lpOrigProcs[120]
+agsDriverExtensionsDX11_MultiDrawInstancedIndirect endp
+agsDriverExtensionsDX11_MultiDrawInstancedIndirectCountIndirect proc
+    jmp lpOrigProcs[128]
+agsDriverExtensionsDX11_MultiDrawInstancedIndirectCountIndirect endp
+agsDriverExtensionsDX11_NotifyResourceBeginAllAccess proc
+    jmp lpOrigProcs[136]
+agsDriverExtensionsDX11_NotifyResourceBeginAllAccess endp
+agsDriverExtensionsDX11_NotifyResourceEndAllAccess proc
+    jmp lpOrigProcs[144]
+agsDriverExtensionsDX11_NotifyResourceEndAllAccess endp
+agsDriverExtensionsDX11_NotifyResourceEndWrites proc
+    jmp lpOrigProcs[152]
+agsDriverExtensionsDX11_NotifyResourceEndWrites endp
+agsDriverExtensionsDX11_NumPendingAsyncCompileJobs proc
+    jmp lpOrigProcs[160]
+agsDriverExtensionsDX11_NumPendingAsyncCompileJobs endp
+agsDriverExtensionsDX11_SetClipRects proc
+    jmp lpOrigProcs[168]
+agsDriverExtensionsDX11_SetClipRects endp
+agsDriverExtensionsDX11_SetDepthBounds proc
+    jmp lpOrigProcs[176]
+agsDriverExtensionsDX11_SetDepthBounds endp
+agsDriverExtensionsDX11_SetDiskShaderCacheEnabled proc
+    jmp lpOrigProcs[184]
+agsDriverExtensionsDX11_SetDiskShaderCacheEnabled endp
+agsDriverExtensionsDX11_SetMaxAsyncCompileThreadCount proc
+    jmp lpOrigProcs[192]
+agsDriverExtensionsDX11_SetMaxAsyncCompileThreadCount endp
+agsDriverExtensionsDX11_SetViewBroadcastMasks proc
+    jmp lpOrigProcs[200]
+agsDriverExtensionsDX11_SetViewBroadcastMasks endp
+agsDriverExtensionsDX11_WriteBreadcrumb proc
+    jmp lpOrigProcs[208]
+agsDriverExtensionsDX11_WriteBreadcrumb endp
+agsDriverExtensionsDX12_CreateDevice proc
+    jmp lpOrigProcs[216]
+agsDriverExtensionsDX12_CreateDevice endp
+agsDriverExtensionsDX12_CreateFromDevice proc
+    jmp lpOrigProcs[224]
+agsDriverExtensionsDX12_CreateFromDevice endp
+agsDriverExtensionsDX12_Destroy proc
+    jmp lpOrigProcs[232]
+agsDriverExtensionsDX12_Destroy endp
+agsDriverExtensionsDX12_DestroyDevice proc
+    jmp lpOrigProcs[240]
+agsDriverExtensionsDX12_DestroyDevice endp
+agsDriverExtensionsDX12_PopMarker proc
+    jmp lpOrigProcs[248]
+agsDriverExtensionsDX12_PopMarker endp
+agsDriverExtensionsDX12_PushMarker proc
+    jmp lpOrigProcs[256]
+agsDriverExtensionsDX12_PushMarker endp
+agsDriverExtensionsDX12_SetMarker proc
+    jmp lpOrigProcs[264]
+agsDriverExtensionsDX12_SetMarker endp
+agsInit proc
+    jmp lpOrigProcs[272]
+agsInit endp
+agsSetDisplayMode proc
+    jmp lpOrigProcs[280]
+agsSetDisplayMode endp
 end

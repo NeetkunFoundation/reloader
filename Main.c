@@ -3,7 +3,7 @@
 #include "Linker.h"
 #include "Utils.h"
 
-#define JZ_INSTRUCTION_ADDR 0x164E276F0+0x68
+#define JZ_INSTRUCTION_ADDR 0x15ffa1ee0+0x68
 
 BOOL WINAPI DllMain(_In_ HINSTANCE hinstDLL, _In_ DWORD fdwReason, _In_ LPVOID lpvReserved)
 {
